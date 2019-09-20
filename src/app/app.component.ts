@@ -8,10 +8,4 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class AppComponent {
   serverElements = [];
-
-  // mainChanged(event: any) {
-  //   console.log('EVENT: ', event);
-  //   this.serverElements = event;
-  // }
-
 }

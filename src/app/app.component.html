@@ -3,7 +3,14 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
-      <app-server-element [serverElement]="server" *ngFor="let server of serverElements"></app-server-element>
+      <app-server-element [serverElement]="server" *ngFor="let server of serverElements">
+        <!-- The below html part can be placed here inside the 'app-server-element' html tags, it will be  -->
+        <!-- grabbed by the 'ng-content' hook and projected in the 'app-server-element' component's html   -->
+        <!-- <p>
+          <strong *ngIf="server.type === 'server'" style="color: red">{{ server.content }}</strong>
+          <em *ngIf="server.type === 'blueprint'">{{ server.content }}</em>
+        </p>         -->
+      </app-server-element>
     </div>
   </div>
 </div>
