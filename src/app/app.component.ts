@@ -9,7 +9,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class AppComponent {
   serverElements = [];
 
-
   changeServerName() {
     this.serverElements[0].name = 'CHANGED';
   }

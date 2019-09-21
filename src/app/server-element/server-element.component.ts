@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges, DoCheck, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges, DoCheck, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked } from '@angular/core';
 
 @Component({
@@ -17,6 +17,7 @@ export class ServerElementComponent implements OnInit,
 
   @Input() serverElement: {type: string, name: string, content: string};
   @Input() name: string;
+  @ViewChild('header', {static: true}) heading: ElementRef;
 
   constructor() {
     console.log('CONSTRUCTOR CALLED');
@@ -29,26 +30,32 @@ export class ServerElementComponent implements OnInit,
 
   ngOnInit() {
     console.log('NG_ON_INIT CALLED');
+    console.log('HEADER: ', this.heading.nativeElement.textContent);
   }
 
   ngDoCheck() {
     console.log('NG_DO_CHECK CALLED');
+    console.log('HEADER: ', this.heading.nativeElement.textContent);
   }
 
   ngAfterContentInit() {
     console.log('NG_AFTER_CONTENT_INIT CALLED');
+    console.log('HEADER: ', this.heading.nativeElement.textContent);
   }
 
   ngAfterContentChecked() {
     console.log('NG_AFTER_CONTENT_CHECKED CALLED');
+    console.log('HEADER: ', this.heading.nativeElement.textContent);
   }
 
   ngAfterViewInit() {
     console.log('NG_AFTER_VIEW_INIT CALLED');
+    console.log('HEADER: ', this.heading.nativeElement.textContent);
   }
 
   ngAfterViewChecked() {
     console.log('NG_AFTER_VIEW_CHECKED CALLED');
+    console.log('HEADER: ', this.heading.nativeElement.textContent);
   }
 
   ngOnDestroy() {
