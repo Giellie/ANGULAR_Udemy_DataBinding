@@ -8,7 +8,7 @@
       <app-server-element [name]="server.name" [serverElement]="server" *ngFor="let server of serverElements">
         <!-- The below html part can be placed here inside the 'app-server-element' html tags, it will be  -->
         <!-- grabbed by the 'ng-content' hook and projected in the 'app-server-element' component's html   -->
-        <p>
+        <p #contentParagraph>
           <strong *ngIf="server.type === 'server'" style="color: red">{{ server.content }}</strong>
           <em *ngIf="server.type === 'blueprint'">{{ server.content }}</em>
         </p>        
